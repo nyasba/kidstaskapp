@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidsTaskApp.item.KidsTaskMorning"
+             Title="あさ">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="mainGrid" Padding="10,20,10,20" ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="スタート" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button Text="うがいを する" Grid.Row="0" Grid.Column="1"/>
+                <Button Text="きがえる" Grid.Row="0" Grid.Column="2"/>
+                <Button Text="ふくを せんたくきに いれる" Grid.Row="1" Grid.Column="2"/>
+                <Button Text="ごはんを たべる" Grid.Row="2" Grid.Column="2"/>
+                <Button Text="しょっきを かたづける" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="はみがきを する" Grid.Row="2" Grid.Column="0"/>
+                <Button Text="おもちゃを かたづける" Grid.Row="3" Grid.Column="0"/>
+                <Button Text="かばんを じゅんびする" Grid.Row="4" Grid.Column="0"/>
+                <Button Text="ヘルメットを かぶる" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="ゴール" Grid.Row="4" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
