@@ -3,9 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KidsTaskApp.item.KidsTaskEvening"
              Title="よる">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStartGoal" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="taskButtonNotDone" TargetType="Button">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="taskButtonDone" TargetType="Button">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="DarkBlue"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="よるです" />
-        </StackLayout>
+        <ScrollView>
+            <Grid x:Name="mainGrid" Padding="10,20,10,20" ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource labelStartGoal}" Text="スタート" />
+                <Button x:Name="taskButton1" Grid.Row="0" Grid.Column="1" Style="{DynamicResource taskButton1}" Text="てあらい うがい" />
+                <Button x:Name="taskButton2" Grid.Row="0" Grid.Column="2" Style="{DynamicResource taskButton2}" Text="あしたの じゅんび" />
+                <Button x:Name="taskButton3" Grid.Row="1" Grid.Column="2" Style="{DynamicResource taskButton3}" Text="ごはんの じゅんび" />
+                <Button x:Name="taskButton4" Grid.Row="2" Grid.Column="2" Style="{DynamicResource taskButton4}" Text="しょっきを かたづける" />
+                <Button x:Name="taskButton5" Grid.Row="2" Grid.Column="1" Style="{DynamicResource taskButton5}" Text="おふろに はいる" />
+                <Button x:Name="taskButton6" Grid.Row="2" Grid.Column="0" Style="{DynamicResource taskButton6}" Text="ドリル！" />
+                <Button x:Name="taskButton7" Grid.Row="3" Grid.Column="0" Style="{DynamicResource taskButton7}" Text="おもちゃを かたづける" />
+                <Button x:Name="taskButton8" Grid.Row="4" Grid.Column="0" Style="{DynamicResource taskButton8}" Text="おちゃを のむ" />
+                <Button x:Name="taskButton9" Grid.Row="4" Grid.Column="1" Style="{DynamicResource taskButton9}" Text="はみがきを する" />
+                <Label Grid.Row="4" Grid.Column="2" Style="{StaticResource labelStartGoal}" Text="ゴール" />
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
